@@ -1,5 +1,7 @@
 CREATE SEQUENCE user_seq START 1 INCREMENT 1;
 
+SET SEARCH_PATH = hibernate;
+
 CREATE TABLE hibernate.users (
     id INTEGER,
     installation_id VARCHAR,

@@ -1,3 +1,5 @@
+SET SEARCH_PATH = hibernate;
+
 alter table hibernate.workshops
     drop constraint workshops_primary_instructor_id_fkey;
 

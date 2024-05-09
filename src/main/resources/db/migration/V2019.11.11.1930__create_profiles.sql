@@ -1,4 +1,5 @@
 create sequence profile_seq start 1 increment 1;
+SET SEARCH_PATH = hibernate;
 
 create table hibernate.profiles (
     id INTEGER,
