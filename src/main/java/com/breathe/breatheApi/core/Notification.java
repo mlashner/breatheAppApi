@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Notifcation {
+public class Notification {
     @Id
     @Column(name = "id", nullable = false)
     private long id;
