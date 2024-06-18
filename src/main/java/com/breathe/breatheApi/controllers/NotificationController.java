@@ -5,6 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.breathe.breatheApi.services.NotificationService;
+
+import javassist.compiler.NoFieldException;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,5 +21,15 @@ public class NotificationController {
     @GetMapping
     public List<Notification> getAllNotifications(){
         return notificationService.getAllNotifications();
+    }
+
+    @PostMapping("/broadcast")
+    public Notification createNotification(Long userId, String message, Long workshopId){
+        System.err.println("WorkshopId: " + workshopId);
+        if(workshopId == null){
+            return notificationService.createNotification(userId, message);
+        }
+
+        return notificationService.createNotification(userId, message, workshopId);
     }
 }

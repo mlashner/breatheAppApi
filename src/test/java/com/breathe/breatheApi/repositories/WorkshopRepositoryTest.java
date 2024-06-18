@@ -22,7 +22,6 @@ public class WorkshopRepositoryTest extends BreatheApiApplicationTests {
     @Test
     public void testCreate() {
         Workshop workshop = Workshop.builder()
-                .id(1L)
                 .title("Come Play With Me")
                 .description("everybody happi")
                 .startTime(LocalDateTime.of(2019, 7, 11, 11, 30))
@@ -39,7 +38,6 @@ public class WorkshopRepositoryTest extends BreatheApiApplicationTests {
     @Transactional
     public void testUpdate() {
         Workshop workshop = Workshop.builder()
-                .id(1L)
                 .title("Come Play With Me")
                 .description("everybody happi")
                 .startTime(LocalDateTime.of(2019, 7, 11, 11, 30))
@@ -67,7 +65,6 @@ public class WorkshopRepositoryTest extends BreatheApiApplicationTests {
     @Test
     public void testDelete() {
         Workshop workshop = Workshop.builder()
-                .id(1L)
                 .title("Come Play With Me")
                 .description("everybody happi")
                 .startTime(LocalDateTime.of(2019, 7, 11, 11, 30))

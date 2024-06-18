@@ -19,11 +19,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Workshop {
-    @Id
-    @Column(name = "id", nullable = false)
-    private Long id;
-
+public class Workshop extends Base{
     @Column(name = "title")
     private String title;
 

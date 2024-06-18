@@ -6,3 +6,4 @@ spring:
     password: password
   flyway:
     baselineOnMigrate: true
+    validateOnMigrate: false

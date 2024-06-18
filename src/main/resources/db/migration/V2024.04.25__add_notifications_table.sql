@@ -5,7 +5,7 @@ CREATE TABLE hibernate.notifications (
     id INTEGER,
     msg VARCHAR,
     user_id INTEGER,
-    workshop_id INTEGER,
+    workshop_id INTEGER NULL,
 
     PRIMARY KEY(id),
     FOREIGN KEY (user_id) REFERENCES users (id),

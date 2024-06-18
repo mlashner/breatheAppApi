@@ -13,17 +13,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Notification {
-    @Id
-    @Column(name = "id", nullable = false)
-    private long id;
-
+public class Notification extends Base{
     @Column(name = "msg")
     private String msg;
 
-    @Column(name = "user_id")
+    @Column(name = "user_id", nullable = false)
     private long user_id;
 
-    @Column(name = "workshop_id")
-    private long workshop_id;
+    @Builder.Default
+    @Column(name = "workshop_id", nullable = true)
+    private Long workshop_id = null;
 }
