@@ -47,7 +47,6 @@ public class NotificationService {
                                     .workshop_id(workshopId)
                                     .build();
 
-        System.out.println("ONE!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         return notificationRepository.save(notification);
     }
 
@@ -63,7 +62,6 @@ public class NotificationService {
                                     .msg(message)
                                     .build();
 
-        System.out.println("TWO!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         return notificationRepository.save(notification);
     }
 }
